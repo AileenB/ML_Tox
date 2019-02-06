@@ -189,7 +189,7 @@ ML_Tox <- function(file, sheetInd=1, classLabelPos="active", classLabelNeg="pass
         print(myParameterImportance)
         print(myComparisonOfClasses)
         
-        myCorrectPrediction <- sum(myPredictions==myTox)
+        myCorrectPrediction <- sum(unlist(myPredictions[1,])==myTox)
         print("Number of correct predictions:")
         print(myCorrectPrediction)
         
